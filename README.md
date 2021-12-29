@@ -17,14 +17,14 @@ diasporic —  https://www.dictionary.com/e/word-of-the-day/
     adjective: of, being, or relating to any group that has been dispersed outside its traditional homeland, either involuntarily or by migration.
 ```
 
-To install, run `go install github.com/tstromberg/cmd/wotd/wotd.go`
+To install, run `go install github.com/tstromberg/wotd/cmd/wotd@latest`
 
 ### Library
 
 See `cmd/wotd/motd.go` as an example, but the API is simple:
 
 ```go
-r, err := wotd.Wordnik()
+r, err := wotd.Wordnik(context.Background())
 if err != nil {
     panic(err.Error())
 }
